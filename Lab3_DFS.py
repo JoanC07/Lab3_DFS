@@ -113,12 +113,19 @@ class Grafo:
         visitado.add(nodo_de_inicio)
         #Nodo de inicio es igual a nuestro objetivo
         if nodo_de_inicio == objetivo:
+            #Retorno de ruta
             return camino
+            #Bucle para la lista adyacencia 
         for (vecino, peso) in self.m_lista_adyacencia[nodo_de_inicio]:
+            # Si nuestro nodo vecino no esta en los nodos visitados 
             if vecino not in visitado:
+                #Asignamos si el resultado es igual a nuestro vecino, objetivo, camino y visitado
                 resultado = self.dfs(vecino, objetivo, camino, visitado)
+                #Evalua el resultado 
                 if resultado is not None:
+                    #Devuelve nuestro resultado
                     return resultado
+        # Aplila el camino y retorna la ruta
         camino.pop()
         return None
 
