@@ -67,12 +67,23 @@ class Grafo:
         '''
         # Agrega el nodo 2 a nuestra lista del nodo 1.
         self.m_lista_adyacencia[nodo1].add((nodo2, peso))
+        # Evalua si el nodo es dirigido o no
         if not self.m_dirigido:
             # Agrega el nodo 1 a nuestra lista del nodo 2.
             self.m_lista_adyacencia[nodo2].add((nodo1, peso))
 
     def Imprimir_lista_adyacencia(self):
+        '''
+        Nos imprime la representacion grafica por pantalla el grafo generado de nuestra lista de ayacencia.
 
+        Parametros
+        ---------- 
+        No recibe
+
+        Retorna
+        ------
+        Nada
+        '''
         # Recorre la lista de adyacencia
         for llave in self.m_lista_adyacencia.keys():
             # Imprime el nodo
