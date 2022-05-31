@@ -2,35 +2,7 @@
 from queue import Queue
 class Grafo:
     
-    '''
-    Clase Grafo la cual nos va a representar a nuestro Grafo.
 
-    ...
-
-    Parametros
-    ----------
-        m_numero_nodos : int
-            Numero de nodos 
-        numero_nodos : int
-            Rango de nodos 
-        m_dirigido : boolean
-            Tipo de grafo si es dirigida o no dirigida.
-        m_lista_adyacencia : diccionario
-            Representación gráfica - Lista de adyacencia.
-    Establecimiento de los parametros para el metodo constructor (inicializado)
-
-    Métodos
-    ------- 
-        Agregar_borde(self, nodo1, nodo2, peso=1):
-            Agregar arista al grafo.
-        Imprimir_lista_adyacencia(self):
-            Imprime la representacion grafica
-        __init__(self, numero_nodos, dirigido=True):
-            Recibe el numero de nodos y rango y verifica si es dirigido o no
-        bfs_transversal(nodo_inicial):
-            Imprimir el recorrido BFS de un vértice fuente dado.
-
-    '''
 
     def __init__(self, numero_nodos, dirigido = True):
 
