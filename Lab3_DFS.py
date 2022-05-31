@@ -90,9 +90,28 @@ class Grafo:
             print("nodo", llave, ": ", self.m_lista_adyacencia[llave])
 
     def dfs(self, nodo_de_inicio, objetivo, camino = [], visitado = set()):
-        # Conjunto de nodos visitados para evitar bucles.
-        camino.append(nodo_de_inicio)
+        '''
+        Función que imprime el recorrido BFS de un vértice fuente dado. bfs_traversal(int s) y
+        recorre los vértices alcanzables desde s.
+        Genera una lista de las colas visitadas y muestra el recorrido realizado, recibe el 
+        valor de nodo_de_inicio.
+
+        Parametros
+        -----------
+        nodo_de_inicio : int
+        visitado : int
+        camino: lista
+
+        Retorna
+        -------
+        Recorido del nodo vecino y peso
+
+        '''
+        # Ruta del nodo de inicio
+        camino.append(nodo_de_inicio) 
+        # Se agrega a la lista de nodos visitados
         visitado.add(nodo_de_inicio)
+        #Nodo de inicio es igual a nuestro objetivo
         if nodo_de_inicio == objetivo:
             return camino
         for (vecino, peso) in self.m_lista_adyacencia[nodo_de_inicio]:
