@@ -130,12 +130,50 @@ class Grafo:
         return None
 
 if __name__ == "__main__":
+    print("----------------------------------------------------------")
+    print("Caso 1")
     grafo = Grafo(5, dirigido=False)
     # Cada uno agrega los bordes del grafo con el peso
     grafo.agregar_borde(3, 1)
     grafo.agregar_borde(2, 2)
     grafo.agregar_borde(1, 4)
     grafo.agregar_borde(0, 2)
+    grafo.agregar_borde(2, 3)
+
+    # Imprime la lista de colas
+    grafo.Imprimir_lista_adyacencia()
+
+    
+    camino_transversal = []
+    camino_transversal = grafo.dfs(0, 3)
+    print(f"El camino transversal del nodo 0 a el nodo 3 is: {camino_transversal}")
+
+    print("----------------------------------------------------------")
+    print("Caso 2")
+    grafo = Grafo(4, dirigido=False)
+    # Cada uno agrega los bordes del grafo con el peso
+    grafo.agregar_borde(3, 1)
+    grafo.agregar_borde(2, 2)
+    grafo.agregar_borde(1, 0)
+    grafo.agregar_borde(0, 2)
+    grafo.agregar_borde(2, 3)
+
+    # Imprime la lista de colas
+    grafo.Imprimir_lista_adyacencia()
+
+    
+    camino_transversal = []
+    camino_transversal = grafo.dfs(0, 3)
+    print(f"El camino transversal del nodo 0 a el nodo 3 is: {camino_transversal}")
+
+    print("----------------------------------------------------------")
+    print("Caso 3")
+    grafo = Grafo(6, dirigido=False)
+    # Cada uno agrega los bordes del grafo con el peso
+    grafo.agregar_borde(3, 0)
+    grafo.agregar_borde(2, 5)
+    grafo.agregar_borde(1, 4)
+    grafo.agregar_borde(5, 2)
     grafo.agregar_borde(2, 3)
 
     # Imprime la lista de colas
